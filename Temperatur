@@ -1,0 +1,53 @@
+package klausur;
+
+public class Temperatur {
+
+	public static String temperaturZuText(int temp) {
+
+		if (temp < 0) {
+
+			return "frostig";
+
+		} else if (temp <= 10) {
+
+			return "kalt";
+
+		} else if (temp <= 20) {
+
+			return "kühl";
+
+		} else if (temp <= 30) {
+
+			return "warm";
+
+		} else {
+
+			return "heiß";
+
+		}
+
+	}
+
+	public static void main(String[] args) {
+
+		System.out.println(temperaturZuText(-15)); // frostig
+		System.out.println(temperaturZuText(-1)); // frostig
+
+		System.out.println(temperaturZuText(0)); // kalt
+		System.out.println(temperaturZuText(5)); // kalt
+		System.out.println(temperaturZuText(10)); // kalt
+
+		System.out.println(temperaturZuText(11)); // kühl
+		System.out.println(temperaturZuText(20)); // kühl
+
+		System.out.println(temperaturZuText(21)); // warm
+		System.out.println(temperaturZuText(30)); // warm
+
+		System.out.println(temperaturZuText(31)); // heiß
+		System.out.println(temperaturZuText(40)); // heiß
+		System.out.println(temperaturZuText(200)); // heiß
+		System.out.println(temperaturZuText(1200)); // heiß
+
+	}
+
+}
